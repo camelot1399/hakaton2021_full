@@ -49,6 +49,7 @@ const App = () => {
           <AppRoot>
             <View activePanel={activePanel}>
               <Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go}/>
+              <View activePanel={activePanel} popout={popout}></View>
             </View>
           </AppRoot>
         </AdaptivityProvider>
