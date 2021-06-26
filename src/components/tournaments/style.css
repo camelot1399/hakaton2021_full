@@ -41,8 +41,62 @@
     display: flex;
     align-items: center;
     margin-top: 10px;
+    color: #000;
 }
 
 .tournir__a {
     text-decoration: none;
+}
+
+.remindMe {
+    color: white;
+    background: #3F8AE0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.close {
+    background-color: #C4C4C4;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.iconDone {
+    color: white;
+    background: #27AE60;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.iconCancel {
+    color: white;
+    background: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.tournir__imgBlock {
+    position: relative;
+}
+
+.iconImgBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notice {
+    color: #ccc;
+}
+
+.results {
+    font-weight: 600;
+    color: black;
+}
+
+.nameTeam {
+    font-size: 10px;
 }
