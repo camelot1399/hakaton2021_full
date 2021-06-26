@@ -1,8 +1,10 @@
 import React from 'react';
+import {Layout} from '../components/layout/layout';
 
 import { Panel, PanelHeader, Header, Group, Cell, Avatar } from '@vkontakte/vkui';
 
 import './Home.css';
+import {Tournaments} from '../components';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -19,6 +21,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group header={<Header mode="secondary">Navigation Example</Header>}>
 		</Group>
+		<Layout tournaments={<Tournaments/>}/>
 	</Panel>
 );
 

@@ -1,0 +1,48 @@
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav_item {
+    text-decoration: none;
+    color: #000;
+}
+
+.wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.listGames {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.game {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.live {
+    color: white;
+    background-color: red;
+    padding: 10px;
+}
+
+.Tournirs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.tournir {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tournir__a {
+    text-decoration: none;
+}
