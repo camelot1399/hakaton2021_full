@@ -17,11 +17,13 @@ import {News} from './panels/News/News';
 import {Provider} from 'react-redux';
 import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkontakte/icons";
 import {Navigation} from './components/navigation/navigation';
+import {Chat} from './panels/Chat/Chat';
 
 const ROUTES = {
   MATCHES: 'matches',
   NEWS: 'news',
   MATCH: 'match',
+  CHAT: 'chat'
 };
 
 
@@ -41,17 +43,21 @@ const App = () => {
       <AdaptivityProvider>
         <AppRoot embedded snoLegacyClasses style={{paddingLeft: '10px', paddingRight: '10px', width: '375px', marginBottom: '50px'}} >
           <View activePanel={activePanel}>
-            <Panel id="matches">
+            <Panel id={ROUTES.MATCHES}>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Matches />
             </Panel>
-            <Panel id="news">
+            <Panel id={ROUTES.NEWS}>
               <Navigation go={go} ROUTES={ROUTES}/>
               <News />
             </Panel>
-            <Panel id="match">
+            <Panel id={ROUTES.MATCH}>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Match />
+            </Panel>
+            <Panel id={ROUTES.CHAT}>
+              <Navigation go={go} ROUTES={ROUTES}/>
+              <Chat/>
             </Panel>
           </View>
         </AppRoot>

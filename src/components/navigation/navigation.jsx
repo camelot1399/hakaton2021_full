@@ -19,6 +19,8 @@ export const Navigation = (props) => {
             Матчи
           </TabsItem>
           <TabsItem
+              go={ROUTES.CHAT}
+              onClick={() => go(ROUTES.CHAT)}
           >
             Чат
           </TabsItem>
