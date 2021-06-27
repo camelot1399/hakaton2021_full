@@ -21,18 +21,18 @@
 
 .game {
     border: 1px solid #ccc;
-    padding: 5px;
     border-radius: 5px;
-}
-
-.game + .game {
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
 }
 
 .live {
     color: white;
     background-color: red;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .tourneys {
@@ -61,6 +61,9 @@
     background: #3F8AE0;
     padding: 10px;
     border-radius: 10px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
 }
 
 .close {
@@ -68,6 +71,7 @@
     color: white;
     padding: 10px;
     border-radius: 10px;
+    font-size: 11px;
 }
 
 .iconDone {
