@@ -34,8 +34,9 @@ const App = () => {
   const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 
 
-  const go = e => {
-    setActivePanel(e.currentTarget.dataset.to);
+  const go = panel => {
+    setActivePanel(panel);
+    console.log(panel)
   };
 
   return (
@@ -92,11 +93,14 @@ const App = () => {
               <Group>
                 <Tabs>
                   <TabsItem
-
+                    id={ROUTES.NEWS}
+                    onClick={() => go(ROUTES.NEWS)}
                   >
                     Новости
                   </TabsItem>
                   <TabsItem
+                    id={ROUTES.MATCHES}
+                    onClick={() => go(ROUTES.MATCHES)}
                   >
                     Матчи
                   </TabsItem>

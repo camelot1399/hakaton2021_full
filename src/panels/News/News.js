@@ -1,11 +1,20 @@
 import React, {Component} from 'react'
+import {
+  View,
+  ScreenSpinner,
+  AdaptivityProvider,
+  AppRoot,
+  Panel,
+  PanelHeader,
+  Group,
+  Tabs,
+  TabsItem, SizeType
+} from '@vkontakte/vkui';
 
-export default class News extends Component {
-  render() {
-    return (
-      <div>
-        <h1>News</h1>
-      </div>
-    )
-  }
-}
+const News = ({id}) => (
+  <Panel id={id}>
+    <PanelHeader>News</PanelHeader>
+  </Panel>
+)
+
+export default News
