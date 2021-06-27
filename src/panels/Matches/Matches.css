@@ -56,6 +56,12 @@
     color: black;
 }
 
+
+.tourneys__teams {
+    display: flex;
+    align-items: center;
+}
+
 .remindMe {
     color: white;
     background: #0000FF;
@@ -121,4 +127,11 @@
 
 .title {
     font-size: 14px;
+}
+
+.blockNotification {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
