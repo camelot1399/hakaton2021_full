@@ -4,17 +4,14 @@ import {CardGame} from './cardGame/cardGame';
 import {useSelector} from 'react-redux';
 import {getGameCard} from '../../../store/cardGame';
 
+
 export const CardGameScroller = () => {
   const { gameCard } = useSelector(getGameCard())
+  console.log()
 
   return (
       <CardScroll size="s">
-        <CardGame/>
-        <CardGame/>
-        <CardGame/>
-        <CardGame/>
-        <CardGame/>
-        <CardGame/>
+        {gameCard.map((game, index) => <CardGame key = {index} gameName ={game.name} imgProp = {game.img}/>)}
       </CardScroll>
   )
 }
