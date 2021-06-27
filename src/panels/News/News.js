@@ -1,3 +1,4 @@
+/*
 import React, {Component} from 'react'
 import {
   View,
@@ -18,3 +19,15 @@ const News = ({id}) => (
 )
 
 export default News
+*/
+
+import React from "react"
+
+export const News = () => {
+
+  return (
+      <>
+        <h1>news</h1>
+      </>
+  )
+}
