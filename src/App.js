@@ -15,10 +15,8 @@ import Match from './panels/Matches/Match/Match';
 import PanelNews from './panels/News/News';
 
 import {Provider, useDispatch, useSelector} from 'react-redux';
-import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkontakte/icons";
 import {Navigation} from './components/navigation/navigation';
 import {Chat} from './panels/Chat/Chat';
-import {getGameCard} from './store/cardGame';
 import {getActivePanel} from './store/activePanel';
 import {sendActivePanel} from './store/activePanel/action';
 
@@ -31,14 +29,9 @@ export const ROUTES = {
 
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState(ROUTES.MATCHES);
-  const [fetchedUser, setUser] = useState(null);
-  const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
-
+  const [activePanel, setActivePanel] = useState(ROUTES.MATCH);
 
   const dispatch = useDispatch()
-
-
 
   useEffect(() => {
     bridge.subscribe(({ detail: { type, data }}) => {
@@ -55,15 +48,17 @@ const App = () => {
 
   const go = panel => {
     setActivePanel(panel);
-    console.log(panel)
   };
 
   const { activePanelReducer } = useSelector(getActivePanel())
-  console.log(activePanelReducer)
+  // console.log(activePanelReducer)
+  console.log('ROUTES.MATCH', ROUTES.MATCH)
+
+
 
   return (
       <AdaptivityProvider>
-        <AppRoot snoLegacyClasses >
+        <AppRoot >
           <View activePanel={activePanel}>
             <Panel id={ROUTES.MATCHES}>
               <PanelHeader>Киберспорт</PanelHeader>
@@ -80,6 +75,12 @@ const App = () => {
               <PanelHeader>Киберспорт</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Chat/>
+            </Panel>
+
+            <Panel id={ROUTES.MATCH}>
+              <PanelHeader>Киберспорт</PanelHeader>
+              <Navigation go={go} ROUTES={ROUTES}/>
+              <Match />
             </Panel>
           </View>
         </AppRoot>

@@ -4,15 +4,10 @@ import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkon
 
 import './Match.css'
 
-export default class News extends Component {
 
-  render() {
-    const {id} = this.props
-    console.log(id)
 
+const Match = () => {
     return (
-      <Panel id={id}>
-        <PanelHeader>Матчи</PanelHeader>
         <>
           <div className={"match-box-scoreboard"}>
             <div className="match-box-item">
@@ -70,8 +65,7 @@ export default class News extends Component {
             </div>
           </div>
         </>
-      </Panel>
-
     )
-  }
 }
+
+export default Match

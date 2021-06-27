@@ -34,45 +34,39 @@ class PanelNews extends React.Component {
           </div>
         </div>
 
-        
+
         <div className="wrap">
           <CardScroll size="s" >
             <ContentCard style={{marginRight: '10px', marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
 
             <ContentCard style={{marginRight: '10px', marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
             <ContentCard style={{ marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
             <ContentCard style={{ marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
             <ContentCard style={{ marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
             <ContentCard style={{ marginBottom: '10px'}}
               image="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
               text="NaVi заканчивают свой путь на квалификациях к The International"
               maxHeight={165}
-              maxWidht={125}
             />
           </CardScroll>
 
@@ -80,7 +74,7 @@ class PanelNews extends React.Component {
             <div className="lastNews__time">1 час назад</div>
             <div className="lastNews__imgBlock">
               <a href="#" className="lastNews__a">
-                <img 
+                <img
                   className="lastNews__img"
                   src="https://images.unsplash.com/photo-1603988492906-4fb0fb251cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"></img>
                 <div className="lastNews__text">
@@ -151,10 +145,10 @@ class PanelNews extends React.Component {
             </CardGrid>
           </Group>
         </div>
-        
+
       </>
 
-      
+
 
 
     )

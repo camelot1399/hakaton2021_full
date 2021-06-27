@@ -1,0 +1,6 @@
+.tabs {
+    padding-bottom: 6px;
+}
+.tabs:hover {
+    padding-bottom: 5px;
+}
