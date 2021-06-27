@@ -8,16 +8,19 @@ import {
   Panel, PanelHeader,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
-import {store} from "./store"
+
 
 import Matches from './panels/Matches/Matches';
 import Match from './panels/Matches/Match/Match';
 import PanelNews from './panels/News/News';
 
-import {Provider} from 'react-redux';
+import {Provider, useDispatch, useSelector} from 'react-redux';
 import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkontakte/icons";
 import {Navigation} from './components/navigation/navigation';
 import {Chat} from './panels/Chat/Chat';
+import {getGameCard} from './store/cardGame';
+import {getActivePanel} from './store/activePanel';
+import {sendActivePanel} from './store/activePanel/action';
 
 export const ROUTES = {
   MATCHES: 'matches',
@@ -32,6 +35,11 @@ const App = () => {
   const [fetchedUser, setUser] = useState(null);
   const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 
+
+  const dispatch = useDispatch()
+
+
+
   useEffect(() => {
     bridge.subscribe(({ detail: { type, data }}) => {
       if (type === 'VKWebAppUpdateConfig') {
@@ -41,6 +49,8 @@ const App = () => {
       }
     });
 
+    dispatch(sendActivePanel(activePanel))
+
   }, []);
 
   const go = panel => {
@@ -48,8 +58,10 @@ const App = () => {
     console.log(panel)
   };
 
+  const { activePanelReducer } = useSelector(getActivePanel())
+  console.log(activePanelReducer)
+
   return (
-    <Provider store={store}>
       <AdaptivityProvider>
         <AppRoot snoLegacyClasses >
           <View activePanel={activePanel}>
@@ -72,7 +84,6 @@ const App = () => {
           </View>
         </AppRoot>
       </AdaptivityProvider>
-    </Provider>
   );
 }
 
