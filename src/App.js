@@ -30,7 +30,7 @@ const ROUTES = {
 
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState(ROUTES.MATCHES);
+  const [activePanel, setActivePanel] = useState(ROUTES.matches);
   const [fetchedUser, setUser] = useState(null);
   const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 
