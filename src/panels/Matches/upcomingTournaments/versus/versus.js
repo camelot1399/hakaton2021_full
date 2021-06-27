@@ -1,4 +1,5 @@
 import React from "react"
+import {Icon24NotificationOutline} from '@vkontakte/icons';
 
 export const Versus = (props) => {
   const {tournament } = props
@@ -8,9 +9,9 @@ export const Versus = (props) => {
   return (
       <>
         {tournament.matches.map((matches, index) => {
-          if(index < 6){
-            const nameCommand = matches.name.split(' ')
+          const nameCommand = matches.name.split(' ')
 
+          if(index < 6){
             return (
                 <div key={index} className="tourneys">
                   <a href="#" class="tourneys__a">
@@ -25,8 +26,10 @@ export const Versus = (props) => {
                       ))}
 
                     </div>
-
-                    <div className="blockNotification live">LIVE</div>
+                    {(index < 4) ?
+                        <div className="blockNotification live">LIVE</div>
+                        :
+                        <div className="blockNotification remindMe"> <Icon24NotificationOutline width="14" height="14"/> Напомнить</div>}
                   </a>
                 </div>
             )

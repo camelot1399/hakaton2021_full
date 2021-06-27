@@ -11,6 +11,7 @@ import classes from './Matches.css'
 import {getAllTournaments, getTournaments} from '../../store';
 import {useDispatch, useSelector} from 'react-redux';
 import {UpcomingTournaments} from './upcomingTournaments/upcomingTournaments';
+import {CardGameScroller} from '../../components/plugins/cardGameScroller/cardGameScroller';
 
 const Matches = () => {
   const { tournaments, error, pending } = useSelector(getTournaments())
@@ -24,53 +25,7 @@ const Matches = () => {
       <>
         <div className="wrap">
 
-          <CardScroll size="s">
-            <Card style={{ width: '150px' }}>
-              <div className="game">
-                <span>cs:go</span>
-                <img
-                    src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg"
-                    alt=""
-                    width="50"/>
-              </div>
-            </Card>
-            <Card style={{ width: '150px' }}>
-              <div className="game">
-                <span>cs:go</span>
-                <img
-                    src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg"
-                    alt=""
-                    width="50"/>
-              </div>
-            </Card>
-            <Card style={{ width: '150px' }}>
-              <div className="game">
-                <span>cs:go</span>
-                <img
-                    src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg"
-                    alt=""
-                    width="50"/>
-              </div>
-            </Card>
-            <Card style={{ width: '150px' }}>
-              <div className="game">
-                <span>cs:go</span>
-                <img
-                    src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg"
-                    alt=""
-                    width="50"/>
-              </div>
-            </Card>
-            <Card style={{ width: '150px' }}>
-              <div className="game">
-                <span>cs:go</span>
-                <img
-                    src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg"
-                    alt=""
-                    width="50"/>
-              </div>
-            </Card>
-          </CardScroll>
+          <CardGameScroller/>
 
           <UpcomingTournaments tournaments={tournaments}/>
 
