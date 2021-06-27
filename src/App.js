@@ -41,7 +41,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <AdaptivityProvider>
-        <AppRoot embedded snoLegacyClasses style={{paddingLeft: '10px', paddingRight: '10px', width: '375px', marginBottom: '50px'}} >
+        <AppRoot embedded snoLegacyClasses >
           <View activePanel={activePanel}>
             <Panel id={ROUTES.MATCHES}>
               <Navigation go={go} ROUTES={ROUTES}/>
