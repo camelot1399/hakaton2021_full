@@ -36,6 +36,7 @@
     padding: 10px;
     border-radius: 10px;
     transition: background 0.5s;
+    min-width: 100px;
 }
 
 .live:hover {
@@ -76,6 +77,7 @@
     display: flex;
     align-items: center;
     transition: background 0.5s;
+    min-width: 100px;
 }
 
 .remindMe:hover {
@@ -88,6 +90,7 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 11px;
+    min-width: 100px;
 }
 
 .iconDone {
