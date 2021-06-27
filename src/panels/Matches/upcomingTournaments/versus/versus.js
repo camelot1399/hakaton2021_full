@@ -9,10 +9,9 @@ export const Versus = (props) => {
   return (
       <>
         {tournament.matches.map((matches, index) => {
-          if (index > 6) return null;
+          const nameCommand = matches.name.split(' ')
 
-            const nameCommand = matches.name.split(' ')
-
+          if(index < 6){
             return (
                 <div key={index} className="tourneys">
                   <a href="#" class="tourneys__a">
@@ -27,7 +26,6 @@ export const Versus = (props) => {
                       ))}
 
                     </div>
-
                     {(index < 4) ?
                         <div className="blockNotification live">LIVE</div>
                         :
@@ -35,6 +33,9 @@ export const Versus = (props) => {
                   </a>
                 </div>
             )
+          }else {
+            return null
+          }
         })}
       </>
   )
