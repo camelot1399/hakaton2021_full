@@ -5,3 +5,52 @@
 .NewsCard {
     background: none;
 }
+
+.lastNews__imgBlock {
+    display: flex;
+}
+
+.lastNews__img {
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+.lastNews__a {
+    color: black;
+    text-decoration: none;
+}
+
+.lastNews__totalBoard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.lastNews__leftBoard {
+    display: flex;
+    align-items: center;
+}
+
+.lastNews__leftBoard div:not(:first-child) {
+    margin-left: 10px;
+}
+.lastNews__time {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
