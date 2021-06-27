@@ -1,0 +1,23 @@
+.match-box-scoreboard{
+    display: flex;
+    align-items: center;
+}
+
+.match-score{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.match-team-name{
+    text-align: center;
+}
+
+.match-box-pagination{
+    display: flex;
+}
+
+.match-pagination{
+    display: flex;
+}
