@@ -4,12 +4,10 @@ import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkon
 
 import './Match.css'
 
-
-
 const Match = () => {
     return (
         <>
-          <div className={"match-box-scoreboard"}>
+          <div className={"match-box-scoreboard wrap"}>
             <div className="match-box-item">
               <img
                 src="https://uploads.turbologo.com/uploads/design/preview_image/4859003/preview_image20210602-26376-1fu9ofb.png"
@@ -34,7 +32,7 @@ const Match = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="wrap">
             <Tabs sizeX={SizeType.REGULAR}>
               <TabsItem
               >
@@ -51,14 +49,14 @@ const Match = () => {
               </TabsItem>
             </Tabs>
           </div>
-          <div>
+          <div className="wrap" style={{textAlign:"center", display: 'flex', alignItems: "center", flexDirection: 'column', marginTop: '25px'}} >
             <iframe
               src="https://player.twitch.tv/esl_csgo"
               height="160"
               width="320"
             >
             </iframe>
-            <div className={"match-box-pagination"}>
+            <div className={"match-box-pagination"} style={{marginTop: '5px'}}>
               <span className={"match-box-pagination"}><Icon20CommentOutline/> <p>65</p></span>
               <span className={"match-box-pagination"}><Icon20ShareOutline/> <p>4</p></span>
               <span className={"match-box-pagination"}><Icon20ViewOutline/> <p>7.2к</p></span>
