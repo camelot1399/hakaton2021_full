@@ -29,7 +29,7 @@ export const ROUTES = {
 
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState(ROUTES.MATCH);
+  const [activePanel, setActivePanel] = useState(ROUTES.MATCHES);
 
   const dispatch = useDispatch()
 
@@ -51,8 +51,6 @@ const App = () => {
   };
 
   const { activePanelReducer } = useSelector(getActivePanel())
-  // console.log(activePanelReducer)
-  console.log('ROUTES.MATCH', ROUTES.MATCH)
 
 
 

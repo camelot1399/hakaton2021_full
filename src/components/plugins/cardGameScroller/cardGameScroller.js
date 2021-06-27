@@ -7,7 +7,7 @@ import {getGameCard} from '../../../store/cardGame';
 
 export const CardGameScroller = () => {
   const { gameCard } = useSelector(getGameCard())
-  console.log()
+
 
   return (
       <CardScroll size="s">

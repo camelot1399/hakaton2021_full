@@ -10,7 +10,6 @@ export const CardGame = (props) => {
   return (
     <Card
       style={{width: '150px'}}
-      onClick={() => activePanelReducer('match')}
     >
       <div className="game">
         <span>{gameName}</span>
