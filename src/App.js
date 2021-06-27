@@ -5,7 +5,7 @@ import {
   ScreenSpinner,
   AdaptivityProvider,
   AppRoot,
-  Panel,
+  Panel, PanelHeader,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import {store} from "./store"
@@ -44,18 +44,22 @@ const App = () => {
         <AppRoot embedded snoLegacyClasses style={{paddingLeft: '10px', paddingRight: '10px', width: '375px', marginBottom: '50px'}} >
           <View activePanel={activePanel}>
             <Panel id={ROUTES.MATCHES}>
+              <PanelHeader>Матчи</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Matches />
             </Panel>
             <Panel id={ROUTES.NEWS}>
+              <PanelHeader>Новости</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <News />
             </Panel>
             <Panel id={ROUTES.MATCH}>
+              <PanelHeader>Матч</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Match />
             </Panel>
             <Panel id={ROUTES.CHAT}>
+              <PanelHeader>Чат</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Chat/>
             </Panel>
