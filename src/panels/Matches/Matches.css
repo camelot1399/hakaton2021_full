@@ -25,27 +25,35 @@
     border-radius: 5px;
 }
 
+.game + .game {
+    margin-left: 20px;
+}
+
 .live {
     color: white;
     background-color: red;
     padding: 10px;
 }
 
-.Tournirs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+.tourneys {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    /*flex-direction: column;*/
 }
-.tournir {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+.tourney {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*margin-top: 10px;*/
     color: #000;
+
 }
 
-.tournir__a {
+.tourneys > a {
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .remindMe {
@@ -90,6 +98,7 @@
 
 .notice {
     color: #ccc;
+    font-size: 14px;
 }
 
 .results {
@@ -99,4 +108,8 @@
 
 .nameTeam {
     font-size: 10px;
+}
+
+.title {
+    font-size: 14px;
 }

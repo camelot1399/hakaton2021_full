@@ -6,10 +6,6 @@ import {
   AdaptivityProvider,
   AppRoot,
   Panel,
-  PanelHeader,
-  Group,
-  Tabs,
-  TabsItem, SizeType
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import {store} from "./store"
@@ -43,7 +39,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <AdaptivityProvider>
-        <AppRoot>
+        <AppRoot embedded snoLegacyClasses style={{paddingLeft: '10px', paddingRight: '10px', width: '375px', marginBottom: '50px'}} >
           <View activePanel={activePanel}>
             <Panel id="matches">
               <Navigation go={go} ROUTES={ROUTES}/>
