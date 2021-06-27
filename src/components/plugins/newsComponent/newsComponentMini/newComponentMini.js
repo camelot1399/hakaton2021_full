@@ -1,6 +1,7 @@
 import React from "react"
 import {ContentCard} from '@vkontakte/vkui';
 
+
 export const NewComponentMini = () => {
   return (
       <>
