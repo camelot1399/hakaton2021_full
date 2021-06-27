@@ -5,21 +5,21 @@ import {
   ScreenSpinner,
   AdaptivityProvider,
   AppRoot,
-  Panel,
+  Panel, PanelHeader,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import {store} from "./store"
 
 import Matches from './panels/Matches/Matches';
 import Match from './panels/Matches/Match/Match';
-import {News} from './panels/News/News';
+import PanelNews from './panels/News/News';
 
 import {Provider} from 'react-redux';
 import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkontakte/icons";
 import {Navigation} from './components/navigation/navigation';
 import {Chat} from './panels/Chat/Chat';
 
-const ROUTES = {
+export const ROUTES = {
   MATCHES: 'matches',
   NEWS: 'news',
   MATCH: 'match',
@@ -32,6 +32,16 @@ const App = () => {
   const [fetchedUser, setUser] = useState(null);
   const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 
+  useEffect(() => {
+    bridge.subscribe(({ detail: { type, data }}) => {
+      if (type === 'VKWebAppUpdateConfig') {
+        const schemeAttribute = document.createAttribute('scheme');
+        schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
+        document.body.attributes.setNamedItem(schemeAttribute);
+      }
+    });
+
+  }, []);
 
   const go = panel => {
     setActivePanel(panel);
@@ -41,21 +51,21 @@ const App = () => {
   return (
     <Provider store={store}>
       <AdaptivityProvider>
-        <AppRoot embedded snoLegacyClasses >
+        <AppRoot snoLegacyClasses >
           <View activePanel={activePanel}>
             <Panel id={ROUTES.MATCHES}>
+              <PanelHeader>Киберспорт</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Matches />
             </Panel>
             <Panel id={ROUTES.NEWS}>
+              <PanelHeader>Киберспорт</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
-              <News />
+              <PanelNews />
             </Panel>
-            <Panel id={ROUTES.MATCH}>
-              <Navigation go={go} ROUTES={ROUTES}/>
-              <Match />
-            </Panel>
+
             <Panel id={ROUTES.CHAT}>
+              <PanelHeader>Киберспорт</PanelHeader>
               <Navigation go={go} ROUTES={ROUTES}/>
               <Chat/>
             </Panel>

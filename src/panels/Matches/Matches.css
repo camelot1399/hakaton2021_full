@@ -134,6 +134,10 @@
     font-size: 14px;
 }
 
+.vkuiCardScroll--s .vkuiCard{
+    width: 150px;
+}
+
 .blockNotification {
     max-width: 100px;
     display: flex;
