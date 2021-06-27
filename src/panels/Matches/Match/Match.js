@@ -9,7 +9,7 @@ export default class News extends Component {
     return (
       <>
         <div className={"match-box-scoreboard"}>
-          <div>
+          <div className="match-box-item">
             <img
               src="https://uploads.turbologo.com/uploads/design/preview_image/4859003/preview_image20210602-26376-1fu9ofb.png"
               width={"100px"} height={"100px"} alt="Logo Team"/>
@@ -17,13 +17,15 @@ export default class News extends Component {
               Team 1
             </p>
           </div>
-          <div>
-            <span className={"match-score"}><p>2</p><p> : </p><p>3</p></span>
+          <div className="match-box-item"> 
+            <span className={"match-score"}>
+              <span>2</span><span> : </span><span>3</span>
+            </span>
             <p>26 июня</p>
-            <p>30:00:54</p>
+            <p className="match-timing">30:00:54</p>
           </div>
-          <div><
-            img
+          <div className="match-box-item">
+            <img
             src="https://uploads.turbologo.com/uploads/design/preview_image/4859003/preview_image20210602-26376-1fu9ofb.png"
             width={"100px"} height={"100px"} alt="Logo Team"/>
             <p className={"match-team-name"}>

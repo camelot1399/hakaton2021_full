@@ -1,6 +1,12 @@
 .match-box-scoreboard{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.match-box-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .match-score{
@@ -8,6 +14,11 @@
     align-items: center;
     font-weight: bold;
     margin: 0 auto;
+    font-size: 30px;
+}
+
+.match-timing {
+    color: #FF1313;
 }
 
 .match-team-name{
