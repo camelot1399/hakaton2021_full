@@ -20,31 +20,30 @@
 }
 
 .game {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 .live {
     color: white;
-    background-color: red;
+    background-color: #FF0033;
     padding: 10px;
     border-radius: 10px;
+    transition: background 0.5s;
 }
 
-.tourneys {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
-    /*flex-direction: column;*/
+.live:hover {
+    background-color: #FF6666;
 }
+
 .tourney {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*margin-top: 10px;*/
+    margin-top: 20px;
     color: #000;
 
 }
@@ -54,16 +53,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: black;
 }
 
 .remindMe {
     color: white;
-    background: #3F8AE0;
+    background: #0000FF;
     padding: 10px;
     border-radius: 10px;
     font-size: 11px;
     display: flex;
     align-items: center;
+    transition: background 0.5s;
+}
+
+.remindMe:hover {
+    background: #6699FF;
 }
 
 .close {
