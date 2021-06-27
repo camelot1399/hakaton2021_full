@@ -60,6 +60,11 @@
 .tourneys__teams {
     display: flex;
     align-items: center;
+    margin-left: 10px;
+}
+
+.tourneys__teams > div:not(:first-child) {
+    margin-left: 10px;
 }
 
 .remindMe {

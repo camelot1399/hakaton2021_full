@@ -3,12 +3,11 @@ import React from "react"
 export const Versus = (props) => {
   const {tournament } = props
 
-
-
   return (
       <>
         {tournament.matches.map((matches, index) => {
-          if(index < 6){
+          if (index > 6) return null;
+
             const nameCommand = matches.name.split(' ')
 
             return (
@@ -30,9 +29,6 @@ export const Versus = (props) => {
                   </a>
                 </div>
             )
-          }else {
-            return null
-          }
         })}
       </>
   )
