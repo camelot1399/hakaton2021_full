@@ -1,11 +1,14 @@
-import {SizeType, Tabs, TabsItem} from "@vkontakte/vkui";
+import {SizeType, Tabs, TabsItem, CardScroll, Card} from "@vkontakte/vkui";
 import {
   Icon16Cancel,
   Icon20CommentOutline,
   Icon20ShareOutline,
   Icon20ViewOutline,
-  Icon28DoneOutline
+  Icon28DoneOutline,
+  Icon24NotificationOutline
 } from "@vkontakte/icons";
+
+
 import React, {Component} from "react";
 import classes from './Matches.css'
 
@@ -14,27 +17,55 @@ class Matches extends Component {
   render() {
     return (
       <div className="wrap">
-        <div className="listGames">
-          <div className="game">
-            <span>Dota2</span>
-            <img src="#" alt="" />
-          </div>
 
-          <div className="game">
-            <span>CS:GO</span>
-            <img src="#" alt="" />
-          </div>
+        <CardScroll size="s">
+          <Card>
+            <div className="game">
+                <span>cs:go</span>
+                <img 
+                  src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg" 
+                  alt="" 
+                  width="50"/>
+            </div>
+          </Card>
+          <Card>
+            <div className="game">
+                <span>cs:go</span>
+                <img 
+                  src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg" 
+                  alt="" 
+                  width="50"/>
+            </div>
+          </Card>
+          <Card>
+            <div className="game">
+                <span>cs:go</span>
+                <img 
+                  src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg" 
+                  alt="" 
+                  width="50"/>
+            </div>
+          </Card>
+          <Card>
+            <div className="game">
+                <span>cs:go</span>
+                <img 
+                  src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg" 
+                  alt="" 
+                  width="50"/>
+            </div>
+          </Card>
+          <Card>
+            <div className="game">
+                <span>cs:go</span>
+                <img 
+                  src="https://www.digiseller.ru/preview/488198/p1_2697660_c9964c10.jpg" 
+                  alt="" 
+                  width="50"/>
+            </div>
+          </Card>
+        </CardScroll>
 
-          <div className="game">
-            <span>League of ...</span>
-            <img src="#" alt="" />
-          </div>
-
-          <div className="game">
-            <span>Call of...</span>
-            <img src="#" alt="" />
-          </div>
-        </div>
 
         <h2 className={'title'}>Ближайшие матчи</h2>
 
@@ -75,7 +106,7 @@ class Matches extends Component {
               </span>
             </span>
               <span><span>Team 1</span> - <span>Team 2</span></span>
-              <span className="live">LIVE</span>
+              <span className="remindMe"> <Icon24NotificationOutline width="14" height="14"/> Напомнить</span>
           </a>
 
         </div>
