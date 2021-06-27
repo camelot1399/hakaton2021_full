@@ -15,7 +15,7 @@ import {CardGameScroller} from '../../components/plugins/cardGameScroller/cardGa
 
 
 const Matches = () => {
-  const { tournaments, error, pending } = useSelector(getTournaments())
+  const { tournaments} = useSelector(getTournaments())
   const dispatch = useDispatch()
 
   useEffect(() => {

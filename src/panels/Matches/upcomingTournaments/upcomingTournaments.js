@@ -3,7 +3,6 @@ import {Versus} from './versus/versus';
 
 export const UpcomingTournaments = (props) => {
   const {tournaments} = props
-  console.log(tournaments)
 
   return (
       <>
