@@ -2,6 +2,7 @@ import React from "react"
 import {CardScroll, Group, CardGrid} from "@vkontakte/vkui";
 
 import {CardGameScroller, NewComponentMini, NewComponentsBig, NewComponentSearch, NewsComponent} from '../../components';
+import style from './News.css'
 
 const fakeApi= [{},{},{},{},{}]
 
