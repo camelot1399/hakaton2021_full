@@ -10,15 +10,11 @@ import {
 import '@vkontakte/vkui/dist/vkui.css';
 
 
-import Matches from './panels/Matches/Matches';
-import Match from './panels/Matches/Match/Match';
-import PanelNews from './panels/News/News';
 
 import {Provider, useDispatch, useSelector} from 'react-redux';
-import {Navigation} from './components/navigation/navigation';
-import {Chat} from './panels/Chat/Chat';
-import {getActivePanel} from './store/activePanel';
-import {sendActivePanel} from './store/activePanel/action';
+import {Navigation} from './components';
+import {Match, Chat, Matches, PanelNews} from './panels';
+import {getActivePanel,sendActivePanel} from './store';
 
 export const ROUTES = {
   MATCHES: 'matches',

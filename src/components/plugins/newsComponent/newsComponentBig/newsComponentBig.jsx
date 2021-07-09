@@ -8,8 +8,8 @@ export const NewComponentsBig = () => {
         <div className="lastNews__imgBlock">
           <a href="#" className="lastNews__a">
             <img
-                className="lastNews__img"
-                src="https://realnoevremya.ru/uploads/news/96/f3/e7c47cea7538245d.jpg"></img>
+    className="lastNews__img"
+    src="https://realnoevremya.ru/uploads/news/96/f3/e7c47cea7538245d.jpg" alt={'photo'}/>
             <div className="lastNews__text">
               NaVi заканчивают свой путь на квалификациях к The International
             </div>
