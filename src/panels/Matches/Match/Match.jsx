@@ -4,7 +4,7 @@ import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkon
 
 import './Match.css'
 
-const Match = () => {
+export const Match = () => {
     return (
         <>
           <div className={"match-box-scoreboard wrap"}>
@@ -65,5 +65,3 @@ const Match = () => {
         </>
     )
 }
-
-export default Match
