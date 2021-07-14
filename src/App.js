@@ -11,14 +11,14 @@ import '@vkontakte/vkui/dist/vkui.css';
 import {Provider, useDispatch, useSelector} from 'react-redux';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Navigation} from './components';
-import {Match, Chat, Matches, PanelNews} from './panels';
+import {PanelChat, PanelMatches, PanelNews} from './panels';
 import {getActivePanel, sendActivePanel} from './store';
 
 export const ROUTES = {
   MATCHES: 'matches',
   NEWS: 'news',
   MATCH: 'match',
-  CHAT: 'chat'
+  CHAT: 'panelChat'
 };
 
 
@@ -57,13 +57,13 @@ const App = () => {
             </Route>
             <Switch>
               <Route path={'/chat'}>
-                <Chat/>
+                <PanelChat/>
               </Route>
               <Route path={'/news'}>
                 <PanelNews/>
               </Route>
               <Route path={['/matches', '/matches&:game']}>
-                <Matches/>
+                <PanelMatches/>
               </Route>
             </Switch>
           </AppRoot>

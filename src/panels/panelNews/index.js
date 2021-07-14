@@ -1,1 +1,1 @@
-export * from './PanelNews'
+export * from './panelNews'

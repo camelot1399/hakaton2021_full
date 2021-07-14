@@ -8,7 +8,7 @@ import {
   NewComponentSearch,
   NewsComponent
 } from '../../components';
-import style from './News.css'
+import style from './style.css'
 
 const fakeApi = [{}, {}, {}, {}, {}]
 

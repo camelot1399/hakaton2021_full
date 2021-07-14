@@ -8,11 +8,11 @@ import {useDispatch, useSelector} from 'react-redux';
 import {CardGameScroller, Modal} from '../../components';
 import {Match} from '../../components/matches/match';
 import {getAllTournaments, getTournaments} from '../../store';
-import classes from './Matches.css'
-import {UpcomingTournaments} from './upcomingTournaments';
+import classes from './style.css'
+import {UpcomingTournaments} from '../../components/matches/upcomingTournaments';
 
 
-export const Matches = () => {
+export const PanelMatches = () => {
   const {tournaments} = useSelector(getTournaments())
   const dispatch = useDispatch()
 
