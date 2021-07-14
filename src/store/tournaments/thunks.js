@@ -1,9 +1,9 @@
+import api from "../../api/api.json"
 import {
   getTournamentsFailure,
   getTournamentsRequest,
   getTournamentsSuccess
 } from "./action"
-import api from "../../api/api.json"
 
 const API_URL_PUBLIC = "https://api.pandascore.co/tournaments?token=G3c07FxOzSESI6vO96uIEUBeOInSEF_bkWGvT1t-e7TD_BZ1G3k"
 /*const API_URL_PUBLIC = "https://api.github.com/gists/public?page20&per_page=5"*/

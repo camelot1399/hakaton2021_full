@@ -1,13 +1,21 @@
 import {Icon56MoneyTransferOutline} from '@vkontakte/icons';
 import {ModalCard, ModalRoot} from '@vkontakte/vkui';
 import React from 'react';
+import {useSelector} from 'react-redux';
+import {getTournaments} from '../../store';
 
 export const Modal = (props) => {
   const {activeModal, setActiveModal, Match} = props
 
+  const {tournaments} = useSelector(getTournaments())
+
+
   return <><ModalRoot
       activeModal={activeModal}
   >
+    {tournaments.matches?.map((value, index)=>{
+      console.log(index)
+    })}
     <ModalCard
         id={`game0`}
         onClose={() => setActiveModal(null)}

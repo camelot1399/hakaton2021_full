@@ -4,7 +4,6 @@ import {Versus} from './versus';
 export const UpcomingTournaments = (props) => {
   const { setActiveModal, tournaments } = props;
 
-
   return (
     <>
       <h2 className={'title'}>Ближайшие матчи</h2>

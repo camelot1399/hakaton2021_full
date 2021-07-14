@@ -7,7 +7,7 @@ export const PanelChat= () => {
   return (
       <View activePanel={'panelChat'}>
         <Panel id={'panelChat'}>
-          <h1 className="chat" >Чат в разработке...</h1>
+          <h1 className={style.chat} >Чат в разработке...</h1>
         </Panel>
       </View>
   )

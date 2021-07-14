@@ -1,15 +1,13 @@
 import {
   Icon16Cancel,
-  Icon28DoneOutline, Icon56MoneyTransferOutline
+  Icon28DoneOutline,
 } from "@vkontakte/icons";
-import {ModalCard, ModalRoot, Panel, View} from '@vkontakte/vkui';
-import React, {Component, useEffect, useState} from "react";
+import {Panel, View} from '@vkontakte/vkui';
+import React, { useEffect, useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import {CardGameScroller, Modal} from '../../components';
-import {Match} from '../../components/matches/match';
+import {CardGameScroller, Modal, UpcomingTournaments, Match} from '../../components';
 import {getAllTournaments, getTournaments} from '../../store';
 import classes from './style.css'
-import {UpcomingTournaments} from '../../components/matches/upcomingTournaments';
 
 
 export const PanelMatches = () => {

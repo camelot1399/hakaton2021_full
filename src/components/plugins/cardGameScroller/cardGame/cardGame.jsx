@@ -1,11 +1,8 @@
 import {Card} from '@vkontakte/vkui';
 import React from "react"
-import {useSelector} from "react-redux";
-import {getActivePanel} from "../../../../store";
 
 export const CardGame = (props) => {
   const {gameName, imgProp} = props
-  const {activePanelReducer} = useSelector(getActivePanel())
 
   return (
     <Card

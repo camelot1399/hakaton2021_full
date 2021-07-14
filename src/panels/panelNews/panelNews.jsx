@@ -1,6 +1,5 @@
 import {CardScroll, Group, CardGrid, View, Panel} from "@vkontakte/vkui";
 import React from "react"
-
 import {
   CardGameScroller,
   NewComponentMini,
@@ -23,14 +22,14 @@ export const PanelNews = () => {
 
             <div className="wrap">
               <CardScroll size="s">
-                {fakeApi.map((game, index) => <NewComponentMini/>)}
+                {fakeApi.map((game, index) => <NewComponentMini key={index}/>)}
               </CardScroll>
 
               <NewComponentsBig/>
 
               <Group>
                 <CardGrid size="l">
-                  {fakeApi.map((game, index) => <NewsComponent/>)}
+                  {fakeApi.map((game, index) => <NewsComponent key={index}/>)}
                 </CardGrid>
               </Group>
             </div>

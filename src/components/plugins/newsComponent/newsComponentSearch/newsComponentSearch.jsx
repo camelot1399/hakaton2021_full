@@ -17,7 +17,6 @@ export const NewComponentSearch = () => {
             <a href="#">
               <Icon28LiveOutline style={{color: 'var(--accent)'}} />
             </a>
-
           </div>
         </div>
       </>

@@ -1,7 +1,7 @@
-import React from "react"
 import {
   Icon24NotificationOutline
 } from "@vkontakte/icons";
+import React from "react"
 
 export const Versus = (props) => {
   const {tournament, setActiveModal} = props
