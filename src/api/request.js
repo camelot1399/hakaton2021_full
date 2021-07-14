@@ -1,5 +1,5 @@
-import { withLogger } from "./logger"
 import axios from "axios"
+import { withLogger } from "./logger"
 
 class Request {
   constructor(token) {

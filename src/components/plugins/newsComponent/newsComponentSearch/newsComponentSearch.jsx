@@ -1,6 +1,6 @@
-import React from "react"
-import {Search} from '@vkontakte/vkui';
 import {Icon28ClipOutline, Icon28LiveOutline, Icon56GalleryOutline} from '@vkontakte/icons';
+import {Search} from '@vkontakte/vkui';
+import React from "react"
 
 export const NewComponentSearch = () => {
   return (

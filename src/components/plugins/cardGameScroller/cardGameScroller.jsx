@@ -1,8 +1,8 @@
-import React from "react";
 import {CardScroll} from "@vkontakte/vkui";
-import {CardGame} from './cardGame';
+import React from "react";
 import {useSelector} from 'react-redux';
 import {getGameCard} from '../../../store';
+import {CardGame} from './cardGame';
 
 
 export const CardGameScroller = () => {

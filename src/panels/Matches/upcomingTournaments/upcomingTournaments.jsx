@@ -2,7 +2,8 @@ import React from "react"
 import {Versus} from './versus';
 
 export const UpcomingTournaments = (props) => {
-  const {tournaments} = props
+  const { setActiveModal, tournaments } = props;
+
 
   return (
     <>
@@ -11,7 +12,7 @@ export const UpcomingTournaments = (props) => {
         <div key={index}>
 
           <h1 className="notice">Турнир: {tournament.league.name} {tournament.serie.full_name}</h1>
-          <Versus tournament={tournament}/>
+          <Versus tournament={tournament} setActiveModal={setActiveModal}/>
         </div>
 
       ))}

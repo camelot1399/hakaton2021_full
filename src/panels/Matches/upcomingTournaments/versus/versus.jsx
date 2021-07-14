@@ -4,7 +4,7 @@ import {
 } from "@vkontakte/icons";
 
 export const Versus = (props) => {
-  const {tournament} = props
+  const {tournament, setActiveModal} = props
 
   return (
     <>
@@ -13,7 +13,7 @@ export const Versus = (props) => {
 
         if (index < 6) {
           return (
-            <div key={index} className="tourneys">
+            <div key={index} className="tourneys" >
               <a href="#" className="tourneys__a">
                 <div className="tourneys__imgs">
                   <img width="50"
@@ -23,7 +23,7 @@ export const Versus = (props) => {
                        alt=""/>
                 </div>
 
-                <div className="tourneys__teams">
+                <div className="tourneys__teams" onClick={() => setActiveModal(`game${index}`)}>
                   {nameCommand.map((Command, index) => (
                     <div key={index}>{Command}</div>
                   ))}
