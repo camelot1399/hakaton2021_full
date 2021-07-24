@@ -1,11 +1,9 @@
-import React from "react"
 import {Card} from '@vkontakte/vkui';
-import {useSelector} from "react-redux";
-import {getActivePanel} from "../../../../store";
+import PropTypes from 'prop-types';
+import React from "react"
 
 export const CardGame = (props) => {
   const {gameName, imgProp} = props
-  const {activePanelReducer} = useSelector(getActivePanel())
 
   return (
     <Card
@@ -21,4 +19,9 @@ export const CardGame = (props) => {
       </div>
     </Card>
   )
+}
+
+CardGame.propTypes = {
+  gameName:PropTypes.string,
+  imgProp:PropTypes.string
 }

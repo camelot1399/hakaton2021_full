@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {SizeType, Tabs, TabsItem, Panel, PanelHeader} from "@vkontakte/vkui";
 import {Icon20CommentOutline, Icon20ShareOutline, Icon20ViewOutline} from "@vkontakte/icons";
+import {SizeType, Tabs, TabsItem} from "@vkontakte/vkui";
+import React from 'react'
 
 import './Match.css'
 
@@ -54,8 +54,7 @@ export const Match = () => {
               src="https://player.twitch.tv/esl_csgo"
               height="160"
               width="320"
-            >
-            </iframe>
+             />
             <div className={"match-box-pagination"} style={{marginTop: '5px'}}>
               <span className={"match-box-pagination"}><Icon20CommentOutline/> <p>65</p></span>
               <span className={"match-box-pagination"}><Icon20ShareOutline/> <p>4</p></span>

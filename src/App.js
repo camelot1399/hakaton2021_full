@@ -1,20 +1,18 @@
-import React, {useState, useEffect} from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import {
-  View,
-  ScreenSpinner,
   AdaptivityProvider,
   AppRoot,
-  Panel, PanelHeader,
+  PanelHeader,
 } from '@vkontakte/vkui';
+import React, {useState, useEffect} from 'react';
 import '@vkontakte/vkui/dist/vkui.css';
 
 
-
 import {Provider, useDispatch, useSelector} from 'react-redux';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Navigation} from './components';
-import {Match, Chat, Matches, PanelNews} from './panels';
-import {getActivePanel,sendActivePanel} from './store';
+import {ChatPanel, MatchesPanel, News} from './panels';
+import {getActivePanel, sendActivePanel} from './store';
 
 export const ROUTES = {
   MATCHES: 'matches',
@@ -24,13 +22,13 @@ export const ROUTES = {
 };
 
 
-const App = () => {
+export const App = () => {
   const [activePanel, setActivePanel] = useState(ROUTES.MATCHES);
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    bridge.subscribe(({ detail: { type, data }}) => {
+    bridge.subscribe(({detail: {type, data}}) => {
       if (type === 'VKWebAppUpdateConfig') {
         const schemeAttribute = document.createAttribute('scheme');
         schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
@@ -40,46 +38,36 @@ const App = () => {
 
     dispatch(sendActivePanel(activePanel))
 
-  }, []);
+  }, [activePanel, dispatch]);
 
   const go = panel => {
     setActivePanel(panel);
   };
 
-  const { activePanelReducer } = useSelector(getActivePanel())
-
+  const {activePanelReducer} = useSelector(getActivePanel())
 
 
   return (
-      <AdaptivityProvider>
-        <AppRoot >
-          <View activePanel={activePanel}>
-            <Panel id={ROUTES.MATCHES}>
+      <BrowserRouter>
+        <AdaptivityProvider>
+          <AppRoot>
+            <Route path={['/:params', '/']}>
               <PanelHeader>Киберспорт</PanelHeader>
-              <Navigation go={go} ROUTES={ROUTES}/>
-              <Matches />
-            </Panel>
-            <Panel id={ROUTES.NEWS}>
-              <PanelHeader>Киберспорт</PanelHeader>
-              <Navigation go={go} ROUTES={ROUTES}/>
-              <PanelNews />
-            </Panel>
-
-            <Panel id={ROUTES.CHAT}>
-              <PanelHeader>Киберспорт</PanelHeader>
-              <Navigation go={go} ROUTES={ROUTES}/>
-              <Chat/>
-            </Panel>
-
-            <Panel id={ROUTES.MATCH}>
-              <PanelHeader>Киберспорт</PanelHeader>
-              <Navigation go={go} ROUTES={ROUTES}/>
-              <Match />
-            </Panel>
-          </View>
-        </AppRoot>
-      </AdaptivityProvider>
+              <Navigation/>
+            </Route>
+            <Switch>
+              <Route path={'/chat'}>
+                <ChatPanel/>
+              </Route>
+              <Route path={'/news'}>
+                <News/>
+              </Route>
+              <Route path={['/matches', '/matches&:game']}>
+                <MatchesPanel/>
+              </Route>
+            </Switch>
+          </AppRoot>
+        </AdaptivityProvider>
+      </BrowserRouter>
   );
 }
-
-export default App;

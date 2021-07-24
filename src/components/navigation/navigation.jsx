@@ -1,42 +1,22 @@
-import React from "react"
-import {Tabs, TabsItem} from '@vkontakte/vkui';
-import './navigation.css'
+import {SubnavigationBar, SubnavigationButton,} from '@vkontakte/vkui';
+import React from 'react';
+import './navigation.css';
+import { Link, useParams } from 'react-router-dom';
 
-export const Navigation = (props) => {
-  const {ROUTES, go } = props
+export const Navigation = () => {
+	const { params } = useParams();
 
-  return (
-      <>
-        <Tabs style={{marginBottom: '25px'}}>
-          <TabsItem
-              className="tabs"
-              go={ROUTES.NEWS}
-              onClick={() => go(ROUTES.NEWS)}
-          >
-            Новости
-          </TabsItem>
-          <TabsItem
-              className="tabs"
-              go={ROUTES.MATCHES}
-              onClick={() => go(ROUTES.MATCHES)}
-          >
-            Матчи
-          </TabsItem>
-          <TabsItem
-              className="tabs"
-              go={ROUTES.CHAT}
-              onClick={() => go(ROUTES.CHAT)}
-          >
-            Чат
-          </TabsItem>
-          <TabsItem
-            className="tabs"
-            go={ROUTES.MATCH}
-            onClick={() => go(ROUTES.MATCH)}
-          >
-            Тест Матч
-          </TabsItem>
-        </Tabs>
-      </>
-  )
-}
+	return (
+				<SubnavigationBar>
+					<Link to="/news">
+						<SubnavigationButton selected={params === 'news'}>news</SubnavigationButton>
+					</Link>
+					<Link to="/chat">
+						<SubnavigationButton selected={params === 'chat'}>chat</SubnavigationButton>
+					</Link>
+					<Link to="/matches">
+						<SubnavigationButton selected={params === 'matches'}>matches</SubnavigationButton>
+					</Link>
+				</SubnavigationBar>
+			)
+};

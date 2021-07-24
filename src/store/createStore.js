@@ -1,10 +1,10 @@
-import thunk from "redux-thunk"
 import {createStore, combineReducers, applyMiddleware, compose} from "redux"
-import {tournamentsReducer} from "./tournaments"
+import thunk from "redux-thunk"
 import {request} from '../api'
-import {logger} from './middleware';
-import {gameCardReducer} from './cardGame';
 import {activePanelReducer} from './activePanel';
+import {gameCardReducer} from './cardGame';
+import {logger} from './middleware';
+import {tournamentsReducer} from "./tournaments"
 
 
 const reducers = combineReducers({
