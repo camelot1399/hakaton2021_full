@@ -11,7 +11,7 @@ import style from './style.css'
 
 const fakeApi = [{}, {}, {}, {}, {}]
 
-export const PanelNews = () => {
+export const News = () => {
 
   return (<>
         <View activePanel={'news'}>

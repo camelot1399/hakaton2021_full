@@ -1,3 +1,3 @@
-export * from "./panelMatches"
-export * from "./panelNews"
-export * from "./panelChat"
+export * from "./matches"
+export * from "./news"
+export * from "./chat"

@@ -1,4 +1,5 @@
 import {Card} from '@vkontakte/vkui';
+import PropTypes from 'prop-types';
 import React from "react"
 
 export const CardGame = (props) => {
@@ -18,4 +19,9 @@ export const CardGame = (props) => {
       </div>
     </Card>
   )
+}
+
+CardGame.propTypes = {
+  gameName:PropTypes.string,
+  imgProp:PropTypes.string
 }

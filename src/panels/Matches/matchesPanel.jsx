@@ -2,15 +2,15 @@ import {
   Icon16Cancel,
   Icon28DoneOutline,
 } from "@vkontakte/icons";
-import {Panel, View} from '@vkontakte/vkui';
-import React, { useEffect, useState} from "react";
+import {ModalCard, ModalRoot, Panel, View} from '@vkontakte/vkui';
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import {CardGameScroller, Modal, UpcomingTournaments, Match} from '../../components';
+import {CardGameScroller, UpcomingTournaments, Match} from '../../components';
 import {getAllTournaments, getTournaments} from '../../store';
 import classes from './style.css'
 
 
-export const PanelMatches = () => {
+export const MatchesPanel = () => {
   const {tournaments} = useSelector(getTournaments())
   const dispatch = useDispatch()
 
@@ -20,12 +20,25 @@ export const PanelMatches = () => {
     dispatch(getAllTournaments())
   }, [dispatch,])
 
+  const NewsModal = () => (
+      <ModalRoot activeModal={activeModal}>
+        {tournaments[0]?.matches.map((matches, index) => {
+          return <ModalCard
+              id={`game${index}`}
+              key={index}
+              onClose={() => setActiveModal(null)}>
+            <Match/>
+          </ModalCard>
+        })}
+      </ModalRoot>
+  )
+
   return (
-      <View activePanel={'matches'} modal={<Modal activeModal={activeModal} setActiveModal={setActiveModal} Match={<Match/>}/>}>
+      <View activePanel={'matches'} modal={<NewsModal/>}>
+
         <Panel id={'matches'} className="wrap">
 
           <CardGameScroller/>
-
           <UpcomingTournaments tournaments={tournaments}
                                setActiveModal={setActiveModal}/>
 

@@ -6,7 +6,6 @@ import { Link, useParams } from 'react-router-dom';
 export const Navigation = () => {
 	const { params } = useParams();
 
-	console.log(params)
 	return (
 				<SubnavigationBar>
 					<Link to="/news">

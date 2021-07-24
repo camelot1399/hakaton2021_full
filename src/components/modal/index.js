@@ -1,1 +1,1 @@
-export * from './Modal'
+export * from './__newsModal'

@@ -11,18 +11,18 @@ import '@vkontakte/vkui/dist/vkui.css';
 import {Provider, useDispatch, useSelector} from 'react-redux';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Navigation} from './components';
-import {PanelChat, PanelMatches, PanelNews} from './panels';
+import {ChatPanel, MatchesPanel, News} from './panels';
 import {getActivePanel, sendActivePanel} from './store';
 
 export const ROUTES = {
   MATCHES: 'matches',
   NEWS: 'news',
   MATCH: 'match',
-  CHAT: 'panelChat'
+  CHAT: 'chat'
 };
 
 
-const App = () => {
+export const App = () => {
   const [activePanel, setActivePanel] = useState(ROUTES.MATCHES);
 
   const dispatch = useDispatch()
@@ -38,7 +38,7 @@ const App = () => {
 
     dispatch(sendActivePanel(activePanel))
 
-  }, []);
+  }, [activePanel, dispatch]);
 
   const go = panel => {
     setActivePanel(panel);
@@ -57,13 +57,13 @@ const App = () => {
             </Route>
             <Switch>
               <Route path={'/chat'}>
-                <PanelChat/>
+                <ChatPanel/>
               </Route>
               <Route path={'/news'}>
-                <PanelNews/>
+                <News/>
               </Route>
               <Route path={['/matches', '/matches&:game']}>
-                <PanelMatches/>
+                <MatchesPanel/>
               </Route>
             </Switch>
           </AppRoot>
@@ -71,5 +71,3 @@ const App = () => {
       </BrowserRouter>
   );
 }
-
-export default App;
